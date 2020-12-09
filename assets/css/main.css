@@ -1,0 +1,379 @@
+@font-face {
+  font-family: "ethno";
+  src: url("../fonts/ethnocentric_rg.ttf") format("truetype"); /* Safari, Android, iOS */
+}
+
+/*Constants*/
+
+:root {
+  --background-color: #f0f0f0;
+  --link-color: #101010;
+  --primary-color: #255ae1;
+}
+
+main {
+  transition: width 2s ease-out;
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:hover {
+  color: inherit;
+}
+
+/* HEADER SECTION */
+
+.article-link__header {
+  color: gray;
+  font-family: ethno;
+  font-size: 0.5em;
+}
+
+.designClass {
+  color: var(--primary-color);
+  margin-right: 10px;
+  font-family: ethno;
+  font-size: 0.5em;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+/* VIDEO section */
+
+.video-container {
+  position: relative;
+  border-radius: 10px;
+}
+
+.video-text {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  color: white;
+}
+
+.video-content {
+  border-radius: 5px;
+}
+
+.video-content {
+  width: 100%;
+}
+
+/* CARDS */
+
+.card-container {
+  border: none;
+  transition-duration: 0.5s;
+}
+.card-container:hover {
+  transform: translateY(-2%);
+  box-shadow: 0 0 10px var(--link-color);
+  -moz-box-shadow: 0 0 10px var(--link-color);
+  -webkit-box-shadow: 0 0 10px var(--link-color);
+  -o-box-shadow: 0 0 10px var(--link-color);
+}
+
+.card-image {
+  position: relative;
+}
+
+.card-image__blur {
+  display: none;
+  z-index: 2;
+  position: absolute;
+  opacity: 0.6;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: var(--link-color);
+  transition: 1s;
+}
+
+.card-image p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+}
+
+.card-container:hover .card-image__blur {
+  display: block;
+  cursor: pointer;
+}
+
+.share-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-20%, 10%);
+  z-index: 3;
+  fill: white;
+  color: white;
+}
+
+.share-icon:hover {
+  cursor: pointer;
+}
+
+/* POP UP */
+
+.pop-up {
+  display: none;
+  border-radius: 15px;
+  background-image: url("../img/popup-background.png");
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  min-height: 150px;
+  max-width: 500px;
+  color: white;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 1000;
+  width: 90vw;
+}
+
+.pop-up__close-container {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(20%, -20%);
+  background-color: var(--background-color);
+  /* border-radius: 25px; */
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border-radius: 50px;
+  color: var(--primary-color);
+  z-index: 5;
+}
+
+.pop-up-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--primary-color);
+  opacity: 0.5;
+  border-radius: 15px;
+}
+
+.pop-up__content {
+  padding: 20px;
+}
+
+.pop-up__content > :nth-child(1) {
+  font-family: ethno;
+  font-size: 12pt;
+}
+/* FORMS */
+
+.newsletter {
+  background-color: white;
+  width: fit-content;
+  vertical-align: middle;
+  border-radius: 20px;
+  position: relative;
+}
+
+.pop-up input[type="email"] {
+  color: var(--link-color);
+  border-radius: 20px;
+  height: 10px;
+  padding-right: 50px;
+  border: none;
+  outline: none;
+  width: 40vw;
+  padding: 10px;
+}
+
+.suscribe-button {
+  border-radius: 20px;
+  border: none;
+  min-height: 35px;
+  background-color: var(--primary-color);
+  color: white;
+  margin-left: -30px;
+  padding-right: 30px;
+  padding-left: 30px;
+  font-weight: bold;
+  outline: none;
+}
+
+.suscribe-button:hover {
+  transform: scale(1.1);
+  background-color: rgba(37, 90, 255, 1);
+  transition: 0.3s ease-in-out;
+}
+
+/* Join courses */
+.courses-carousel {
+  position: relative;
+  width: 100%;
+}
+.carousel-icon__left:hover,
+.carousel-icon__right:hover {
+  cursor: pointer;
+}
+
+.courses-carousel img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 5px;
+  -webkit-box-shadow: 3px 3px 5px 6px transparent; /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow: 3px 3px 5px 6px #ccc; /* Firefox 3.5 - 3.6 */
+  box-shadow: 8px 8px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.courses-carousel button {
+  outline: none;
+  border: none;
+  border-radius: 20px;
+  background-color: white;
+  color: var(--primary-color);
+  padding: 5px 5px 5px 5px;
+  margin-top: 2em;
+}
+
+.courses-carousel button a {
+  color: var(--primary-color);
+}
+
+.courses-carousel button:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+.courses-carousel button:hover a {
+  color: white;
+}
+
+.carousel-icon__left {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-30%, -100%);
+}
+
+.carousel-icon__right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(20%, -100%);
+}
+
+.carousel-icon__right i {
+  animation: scrollRight 2s linear infinite;
+}
+
+@keyframes scrollRight {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(5px, 0);
+  }
+
+  80% {
+    transform: translate(-5px, 0);
+  }
+}
+
+.courses-carousel ul {
+  max-width: calc(90%);
+  overflow-x: hidden;
+  list-style-type: none;
+}
+
+.courses-carousel li:not(:first-child) {
+  margin: 0px 20px;
+}
+.courses-carousel li:first-child {
+  margin-right: 20px;
+}
+
+/* Filter bar */
+.btn-primary {
+  background-color: var(--primary-color);
+  border: none;
+}
+.btn-primary:hover {
+  background-color: var(--primary-color);
+  border: none;
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+.btn-secondary {
+  background-color: gray;
+  border: none;
+}
+.btn-secondary:hover {
+  background-color: gray;
+  color: var(--primary-color);
+}
+.btn-light:hover {
+  background-color: none;
+}
+
+.filter-bar > * {
+}
+
+/* MODAL */
+
+/* Desktop */
+@media screen and (min-width: 680px) {
+  .video-text {
+    transform: translate(-50%, -40%);
+  }
+  .article-link__header {
+    font-size: 0.8em;
+  }
+  .designClass {
+    font-size: 0.8em;
+  }
+  .modal-pop-up {
+    max-width: 85vh;
+  }
+
+  /* Newsletter */
+  .pop-up input[type="email"] {
+    width: 250px;
+  }
+
+  .suscribe-button {
+    margin-left: -45px;
+  }
+
+  .pop-up {
+    margin-bottom: 1em;
+    margin-right: 1em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .article-link__header {
+    font-size: 1em;
+  }
+  .designClass {
+    font-size: 1em;
+  }
+  .modal-pop-up {
+    max-width: 100vh;
+  }
+}

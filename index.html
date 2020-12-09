@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Design Class Blog</title>
+
+    <meta charset="UTF-8" />
+
+    <!-- Learn more about this tag here: https://www.w3schools.com/css/css_rwd_viewport.asp -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Learn more about this tag here: https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/jj676915(v=vs.85)?redirectedfrom=MSDN -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Minified bootstrap css  -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css"
+    />
+
+    <!-- Customized styles -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container" id="main">
+      <div class="row">
+        <div class="col-12">
+          <div
+            class="row justify-content-center justify-content-sm-between header"
+          >
+            <div
+              class="col-12 col-sm-8 d-flex d-sm-block justify-content-center"
+            >
+              <h2>
+                <a class="designClass" href="">DesignClass</a
+                ><a class="article-link__header" href="">Articles</a>
+              </h2>
+            </div>
+            <div
+              class="header-right col-12 col-sm-4 d-flex justify-content-center justify-content-sm-end"
+            >
+              <a href="">Home</a>
+              <a href="">Explore DesingCalss</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12 video-container">
+          <video
+            autoplay=""
+            loop=""
+            class="video-content"
+            style="
+              background-image: url('https://uploads-ssl.webflow.com/5e152bc83b28b3aa944443c7/5ec6ee594c427ec00b34f3cd_Silent Trailer - 720p - 5-21-2020_2-poster-00001.jpg');
+            "
+            muted=""
+            playsinline=""
+            data-wf-ignore="true"
+            data-object-fit="cover"
+          >
+            <source
+              src="https://uploads-ssl.webflow.com/5e152bc83b28b3aa944443c7/5ec6ee594c427ec00b34f3cd_Silent Trailer - 720p - 5-21-2020_2-transcode.mp4"
+              data-wf-ignore="true"
+            />
+            <source
+              src="https://uploads-ssl.webflow.com/5e152bc83b28b3aa944443c7/5ec6ee594c427ec00b34f3cd_Silent Trailer - 720p - 5-21-2020_2-transcode.webm"
+              data-wf-ignore="true"
+            />
+          </video>
+          <div class="video-text">
+            <h1 class="designClass">DesignClass</h1>
+            <p>Build your Creative Confidence</p>
+            <button type="button" class="btn btn-primary">Join a Class</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-sm-8 d-flex d-sm-block justify-content-center">
+          <a class="btn btn-light" href="">All</a>
+          <a class="btn btn-light" href="">Competition</a>
+          <a class="btn btn-light" href="">Articles</a>
+        </div>
+        <div
+          class="col-12 col-sm-4 d-flex justify-content-center justify-content-sm-end"
+        >
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-toggle="modal"
+            data-target="#exampleModalCenter"
+          >
+            Submit an article
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-6">
+          <select
+            class="selectpicker show-tick"
+            data-live-search="true"
+            data-header="Categories"
+            multiple
+            multiple
+            data-actions-box="true"
+            title="Categories"
+          >
+            <
+            <option>Design</option>
+            <option>Competition</option>
+            <option>Architecture</option>
+          </select>
+        </div>
+        <div class="form-group col-6">
+          <select
+            class="selectpicker show-tick"
+            data-live-search="true"
+            data-header="Sub-categories"
+            multiple
+            multiple
+            data-actions-box="true"
+            title="Sub-categories"
+          >
+            <em selected>Sub-categories</em>
+            <option>Sub-categories 1</option>
+            <option>Sub-categories 2</option>
+            <option>Sub-categories 3</option>
+          </select>
+        </div>
+
+        <div class="input-group col-6">
+          <input
+            class="form-control"
+            data-provide="datepicker"
+            placeholder="choose a date"
+          />
+        </div>
+        <div class="input-group col-6">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupPrepend"
+              ><i class="fas fa-search"></i
+            ></span>
+          </div>
+          <input
+            type="text"
+            class="form-control"
+            id="validationCustomUsername"
+            placeholder="Search"
+            aria-describedby="inputGroupPrepend"
+            required
+          />
+          <div class="invalid-feedback">
+            Search
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-1">
+          <h3>Competition Archives</h3>
+        </div>
+      </div>
+
+      <div class="row align-items-center">
+        <div class="col-12 col-sm-6 col-md-4 mt-1">
+          <div class="card card-container">
+            <div class="card-image">
+              <img
+                src="https://uploads-ssl.webflow.com/5e152bc83b28b3841e4443c6/5fbcd6b03ab512c254bd2292_CV19-Memorial-Banner-p-500.jpeg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-image__blur">
+                <p>copucou</p>
+              </div>
+              <span class="share-icon"
+                ><i class="fas fa-share-square"></i
+              ></span>
+            </div>
+            <div class="card-body">
+              <p class="card-title">
+                Covid-19 Community Memorial Design Competition
+              </p>
+              <p class="card-text">
+                Date.
+              </p>
+              <span><i></i></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pop-up" id="newsletter">
+      <div class="pop-up-overlay">&nbsp;</div>
+      <span class="pop-up__close-container" onclick="hidePopUp('newsletter');"
+        ><i class="fas fa-times"></i
+      ></span>
+      <div class="container">
+        <div class="row">
+          <div class="col-10 d-flex flex-column pop-up__content">
+            <span>SUSCRIBE TO OUR NEWSLETTER !</span>
+            <form novalidate class="mt-5 mb-3">
+              <div class="newsletter">
+                <input type="email" placeholder="Enter your email" />
+                <input class="suscribe-button" type="button" value="Suscribe" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pop-up" id="join">
+      <div class="pop-up-overlay">&nbsp;</div>
+      <span class="pop-up__close-container" onclick="hidePopUp('join');"
+        ><i class="fas fa-times"></i
+      ></span>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 d-flex flex-column pop-up__content">
+            <span>JOIN OUR ONLINE <br />RESOURCES</span>
+            <div class="courses-carousel mt-3">
+              <span class="carousel-icon__left">
+                <i class="fas fa-chevron-left fa-5x"></i>
+              </span>
+              <span class="carousel-icon__right">
+                <i class="fas fa-chevron-right fa-5x"></i>
+              </span>
+              <ul class="d-flex">
+                <li>
+                  <div class="d-flex flex-column justify-content-center">
+                    <img
+                      src="https://uploads-ssl.webflow.com/5e152bc83b28b3aa944443c7/5ec6ee594c427ec00b34f3cd_Silent Trailer - 720p - 5-21-2020_2-poster-00001.jpg"
+                    />
+                    <button type="button">
+                      <a href="/">Books</a>
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="d-flex flex-column justify-content-center">
+                    <img
+                      src="https://uploads-ssl.webflow.com/5e152bc83b28b3aa944443c7/5ec6ee594c427ec00b34f3cd_Silent Trailer - 720p - 5-21-2020_2-poster-00001.jpg"
+                    />
+                    <button type="button">
+                      <a href="/">Classes</a>
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="d-flex flex-column justify-content-center">
+                    <img
+                      src="https://uploads-ssl.webflow.com/5e152bc83b28b3aa944443c7/5ec6ee594c427ec00b34f3cd_Silent Trailer - 720p - 5-21-2020_2-poster-00001.jpg"
+                    />
+                    <button type="button">
+                      <a href="/">Scholarship</a>
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Button trigger modal -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModalCenter"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-centered modal-pop-up"
+        role="document"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">
+              Submit a new article
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Title</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="title"
+                  placeholder="Article title"
+                />
+              </div>
+              <div class="form-group">
+                <select
+                  class="selectpicker show-tick"
+                  data-live-search="true"
+                  data-header="Categories"
+                  multiple
+                  multiple
+                  data-actions-box="true"
+                  title="Categories"
+                >
+                  <em selected>Sub-categories</em>
+                  <option>Design</option>
+                  <option>Competition</option>
+                  <option>Architecture</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <select
+                  class="selectpicker show-tick"
+                  data-live-search="true"
+                  data-header="Sub-categories"
+                  multiple
+                  multiple
+                  data-actions-box="true"
+                  title="Sub-categories"
+                >
+                  <em selected>Sub-categories</em>
+                  <option>Sub-categories 1</option>
+                  <option>Sub-categories 2</option>
+                  <option>Sub-categories 3</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1"
+                  >Write your article here (tell us about formatting, where
+                  images go, etc...)</label
+                >
+                <textarea
+                  class="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="3"
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <label for="customFile">Add images</label>
+                <input type="file" id="customFile" multiple />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <script src="./assets/js/script.js" />
+  </body>
+</html>
